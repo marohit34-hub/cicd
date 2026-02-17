@@ -1,4 +1,4 @@
-Deerwalk 2
-islington 5
-Nami 4
-Mid- Valley
+Deerwalk 2400000
+islington 50000
+Nami 40000000
+Mid- Valley900000000
