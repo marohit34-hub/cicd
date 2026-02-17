@@ -1,29 +1,29 @@
-name: my first git hub pipeline 
+name: my first git hub pipeline
 
-on: 
-   push:
-    branches: [ "main" ]
-   pull_request:
-      branches: [ "main" ]
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
 
 jobs:
-   hello-job:
-     runs-on: ubuntu-latest
+  hello-job:
+    runs-on: ubuntu-latest
 
-     steps:
-        - name: checkoutcode
-          uses: actions/checkout@v3
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
 
-	- name: setup python
-	  uses: actions/setup-python@v4
-	  with:
-           python-version: "3.10"	
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
 
-        - name: print a message
-          run: echo "Welcome to Github Actions CI/CD!"
-     
-        - name: system information
-          run: echo "$(whoami) $(hostname -I) $(pwd)"
+      - name: print a message
+        run: echo "Welcome to Github Actions CI/CD!"
 
-        - name: run python file
-          run: python python.py
+      - name: system information
+        run: echo "$(whoami) $(hostname -I) $(pwd)"
+
+      - name: run python file
+        run: python python.py
