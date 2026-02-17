@@ -17,3 +17,5 @@ jobs:
         - name: print a message
           run: echo "Welcome to Github Actions CI/CD!"
      
+        - name: system information
+          run: echo "$(whoami) $(hostname -I) $(pwd)"
